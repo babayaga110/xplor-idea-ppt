@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   Zap, 
@@ -18,7 +17,9 @@ import {
   Layers, 
   Share2,
   Clock,
-  Sparkles
+  Sparkles,
+  Monitor,
+  Layout
 } from 'lucide-react';
 import { SlideData } from './types';
 
@@ -26,7 +27,7 @@ export const SLIDES: SlideData[] = [
   {
     id: 1,
     type: 'cover',
-    title: "25 Low-Infrastructure AR, VR & AI Engagement Ideas for Events",
+    title: "26 Low-Infrastructure AR, VR & AI Engagement Ideas for Events",
     subtitle: "High Engagement • Minimal Hardware • Low Internet Dependency",
     footer: "Event Technology Innovation Deck",
     accentColor: "from-blue-600 to-cyan-400"
@@ -34,12 +35,12 @@ export const SLIDES: SlideData[] = [
   {
     id: 2,
     type: 'content',
-    title: "The Event Engagement Problem",
+    title: "Event Engagement Challenges",
     content: [
-      "Traditional events lack interaction",
-      "Heavy AR/VR hardware is expensive",
-      "Internet failures at venues",
-      "Attendees expect smart, digital experiences"
+      "Low attendee interaction",
+      "High cost of AR/VR hardware",
+      "Internet instability at venues",
+      "Limited personalization"
     ],
     visualType: 'graphic',
     accentColor: "from-red-500 to-orange-400"
@@ -47,12 +48,12 @@ export const SLIDES: SlideData[] = [
   {
     id: 3,
     type: 'content',
-    title: "Our Solution Philosophy",
+    title: "Our Engagement Philosophy",
     content: [
-      "Phone-first experiences",
-      "QR-code based onboarding",
-      "Offline-first or local Wi-Fi usage",
-      "Easy setup, high engagement"
+      "Smartphone-first experiences",
+      "QR-based onboarding",
+      "Offline-first / Local Wi-Fi",
+      "Fast setup, scalable deployment"
     ],
     visualType: 'graphic',
     accentColor: "from-emerald-500 to-teal-400"
@@ -60,116 +61,128 @@ export const SLIDES: SlideData[] = [
   {
     id: 4,
     type: 'grid',
-    title: "AI-Powered Engagement (Low Hardware)",
+    title: "AI Engagement Ideas (1–4)",
     points: [
-      { title: "AI Photo Booth", description: "Offline photo capture with instant stylized filters.", icon: "Camera" },
-      { title: "Face-Based Finder", description: "Allow users to find their event photos using a selfie.", icon: "UserCheck" },
-      { title: "AI Event Guide", description: "Local Wi-Fi chatbot for quick venue queries.", icon: "Sparkles" },
-      { title: "AI Pronunciation", description: "Ensures hosts get speaker names right every time.", icon: "Cpu" }
+      { title: "AI Photo Booth", description: "Offline capture with instant stylized filters.", icon: "Camera" },
+      { title: "Face-Based Finder", description: "Allow users to find their event photos via selfie.", icon: "UserCheck" },
+      { title: "AI Event Guide", description: "Local Wi-Fi chatbot for venue navigation.", icon: "Sparkles" },
+      { title: "AI Pronunciation", description: "Ensures hosts get speaker names right.", icon: "Cpu" }
     ],
     accentColor: "from-indigo-600 to-purple-400"
   },
   {
     id: 5,
     type: 'grid',
-    title: "AI for Interaction & Insights",
+    title: "AI Engagement Ideas (5–7)",
     points: [
-      { title: "AI Icebreaker", description: "Dynamic prompt generation based on attendee roles.", icon: "Users" },
+      { title: "AI Icebreaker", description: "Dynamic networking prompts for attendees.", icon: "Users" },
       { title: "AI Resume Matcher", description: "Match candidates to booths at career fairs.", icon: "Box" },
-      { title: "AI Feedback", description: "Real-time sentiment analysis from simple audio/text input.", icon: "BarChart3" }
+      { title: "AI Feedback Analyzer", description: "Real-time sentiment from short clips.", icon: "BarChart3" }
     ],
     accentColor: "from-pink-600 to-rose-400"
   },
   {
     id: 6,
     type: 'grid',
-    title: "Augmented Reality – Mobile Camera Only",
+    title: "AR Engagement Ideas (8–10)",
     points: [
-      { title: "QR Welcome", description: "Personalized 3D greeting when scanning badge.", icon: "QrCode" },
-      { title: "AR Business Card", description: "Digital overlays on physical contact cards.", icon: "Smartphone" },
-      { title: "AR Direction Finder", description: "Overlay arrows on floor for easy navigation.", icon: "MapPin" }
+      { title: "QR AR Welcome", description: "Personalized 3D greeting on scan.", icon: "QrCode" },
+      { title: "AR Business Card", description: "Interactive overlays on physical cards.", icon: "Smartphone" },
+      { title: "AR Direction Finder", description: "Indoor navigation via mobile camera.", icon: "MapPin" }
     ],
     accentColor: "from-sky-500 to-blue-400"
   },
   {
     id: 7,
     type: 'grid',
-    title: "Interactive AR Experiences",
+    title: "AR Engagement Ideas (11–13)",
     points: [
-      { title: "AR Product Explainer", description: "Pop-up tech specs for exhibition products.", icon: "Box" },
-      { title: "AR Theme Selfie", description: "Branded filters that don't require external apps.", icon: "Camera" },
-      { title: "AR Sponsor Wall", description: "Turn static logos into interactive videos.", icon: "Globe" }
+      { title: "AR Product Explainer", description: "Floating tech specs for exhibition gear.", icon: "Box" },
+      { title: "AR Theme Selfie", description: "Branded filters without app installs.", icon: "Camera" },
+      { title: "AR Sponsor Wall", description: "Interactive videos layered over logos.", icon: "Globe" }
     ],
     accentColor: "from-violet-600 to-indigo-400"
   },
   {
     id: 8,
     type: 'grid',
-    title: "Immersion Without VR Headsets",
+    title: "VR & Immersive (14–16)",
     points: [
-      { title: "360° Virtual Booth", description: "Rotate phone to explore products in 3D space.", icon: "Box" },
-      { title: "360° Memory Wall", description: "Swipeable sphere of event memories.", icon: "Layers" },
-      { title: "Virtual Venue Walkthrough", description: "Pre-event web-based exploration.", icon: "Globe" }
+      { title: "360° Virtual Booth", description: "Explore 3D space via phone gyroscope.", icon: "Box" },
+      { title: "360° Memory Wall", description: "Spherical gallery of event highlights.", icon: "Layers" },
+      { title: "Venue Walkthrough", description: "Immersive pre-event web-based tours.", icon: "Globe" }
     ],
     accentColor: "from-cyan-500 to-blue-400"
   },
   {
     id: 9,
     type: 'grid',
-    title: "Gamified Event Engagement",
+    title: "Immersive VR Experience Booth (17)",
     points: [
-      { title: "QR Check-In Quest", description: "Reward points for visiting specific zones.", icon: "QrCode" },
-      { title: "AR Scavenger Hunt", description: "Find hidden digital items around the hall.", icon: "Trophy" }
+      { title: "Full VR Immersion", description: "Meta Quest headsets transport users to underwater or space worlds.", icon: "Box" },
+      { title: "Audience Mirroring", description: "Large screens display the VR user's view for spectators.", icon: "Monitor" },
+      { title: "Simple Interaction", description: "Intuitive hand controllers or gaze-based navigation.", icon: "Smartphone" },
+      { title: "Offline Reliability", description: "Preloaded assets ensure a smooth lag-free event experience.", icon: "WifiOff" }
     ],
-    accentColor: "from-amber-500 to-yellow-400"
+    accentColor: "from-fuchsia-600 to-purple-500"
   },
   {
     id: 10,
     type: 'grid',
-    title: "Fun & Rewards (Offline Friendly)",
+    title: "Gamification Ideas (18–19)",
     points: [
-      { title: "Spin-the-Wheel", description: "Local web-app based rewards engine.", icon: "Star" },
-      { title: "Local Live Polling", description: "Host-run polls via a local Wi-Fi hotspot.", icon: "BarChart3" }
+      { title: "QR Check-In Quest", description: "Reward points for visiting specific zones.", icon: "QrCode" },
+      { title: "AR Scavenger Hunt", description: "Find hidden digital items around the venue.", icon: "Trophy" }
     ],
-    accentColor: "from-emerald-500 to-green-400"
+    accentColor: "from-amber-500 to-yellow-400"
   },
   {
     id: 11,
     type: 'grid',
-    title: "Smart Networking Experiences",
+    title: "Gamification Ideas (20–21)",
     points: [
-      { title: "Smart Badge QR", description: "Instant digital profile exchange.", icon: "UserCheck" },
-      { title: "Interest Match Wall", description: "Visual map of like-minded attendees.", icon: "Users" },
-      { title: "Digital Autograph Wall", description: "Signature board for speakers and VIPs.", icon: "Box" }
+      { title: "Spin-the-Wheel", description: "Web-app based reward engine.", icon: "Star" },
+      { title: "Local Live Polling", description: "Host polls via a local hotspot.", icon: "BarChart3" }
     ],
-    accentColor: "from-indigo-600 to-blue-500"
+    accentColor: "from-emerald-500 to-green-400"
   },
   {
     id: 12,
     type: 'grid',
-    title: "Memory & Post-Event Engagement",
+    title: "Social & Networking (22–24)",
     points: [
-      { title: "Video Memory Capsule", description: "Short clips stitched into a daily wrap-up.", icon: "Camera" },
-      { title: "AI Highlight Gen", description: "Automated event summaries for LinkedIn.", icon: "Share2" }
+      { title: "Smart Badge QR", description: "Instant digital profile exchange.", icon: "UserCheck" },
+      { title: "Interest Match Wall", description: "Visual map of matching attendees.", icon: "Users" },
+      { title: "Digital Autograph", description: "Sign-in board for VIPs and speakers.", icon: "Box" }
+    ],
+    accentColor: "from-indigo-600 to-blue-500"
+  },
+  {
+    id: 13,
+    type: 'grid',
+    title: "Memory & Engagement (25–26)",
+    points: [
+      { title: "Memory Capsule", description: "Short clips for daily wrap-up videos.", icon: "Camera" },
+      { title: "AI Highlight Gen", description: "Automated event summaries for socials.", icon: "Share2" }
     ],
     accentColor: "from-orange-500 to-red-400"
   },
   {
-    id: 13,
+    id: 14,
     type: 'content',
-    title: "Why These 25 Ideas Work",
+    title: "Why These 26 Ideas Work",
     content: [
-      "No AR glasses or VR headsets required",
+      "No high-end PC required for most ideas",
       "Uses attendee smartphones (BYOD)",
-      "Works offline or on local Wi-Fi",
-      "Fast setup and easy scaling",
-      "High sponsor and attendee value"
+      "Offline or local Wi-Fi compatible",
+      "Sponsor-friendly & scalable",
+      "Easy attendee onboarding"
     ],
     visualType: 'graphic',
     accentColor: "from-blue-600 to-indigo-500"
   },
   {
-    id: 14,
+    id: 15,
     type: 'grid',
     title: "Ideal Event Use Cases",
     points: [
@@ -181,12 +194,12 @@ export const SLIDES: SlideData[] = [
     accentColor: "from-cyan-500 to-emerald-400"
   },
   {
-    id: 15,
+    id: 16,
     type: 'content',
     title: "Technology Stack Overview",
     content: [
-      "Web AR (QR + Camera + Three.js)",
-      "AI Vision (Local inference) & NLP",
+      "Web AR + QR codes (Three.js)",
+      "AI Vision & NLP (Local inference)",
       "Local server / Wi-Fi Hotspot",
       "Post-event cloud synchronization"
     ],
@@ -194,35 +207,35 @@ export const SLIDES: SlideData[] = [
     accentColor: "from-slate-400 to-slate-200"
   },
   {
-    id: 16,
+    id: 17,
     type: 'content',
     title: "Business Impact",
     content: [
       "Higher average engagement time",
-      "Better sponsor visibility & ROI",
-      "Rich, actionable event data",
+      "Better sponsor ROI & visibility",
+      "Rich, actionable event analytics",
       "Viral, shareable digital memories"
     ],
     visualType: 'graphic',
     accentColor: "from-purple-600 to-pink-500"
   },
   {
-    id: 17,
+    id: 18,
     type: 'grid',
     title: "Deployment Simplicity",
     points: [
       { title: "Setup Time", description: "1–2 hours total.", icon: "Clock" },
-      { title: "Hardware", description: "Phones + 1 Laptop.", icon: "Smartphone" },
+      { title: "Hardware", description: "Phones + 1 Laptop + Screen.", icon: "Smartphone" },
       { title: "Internet", description: "Completely Optional.", icon: "WifiOff" },
       { title: "Staff", description: "Minimal oversight required.", icon: "Users" }
     ],
     accentColor: "from-emerald-600 to-green-400"
   },
   {
-    id: 18,
+    id: 19,
     type: 'closing',
-    title: "Future-Ready Events Don’t Need Heavy Tech",
-    subtitle: "Smart Ideas Create Powerful Experiences",
+    title: "Smart Events Don’t Need Heavy Tech",
+    subtitle: "Experiences Matter More Than Hardware",
     accentColor: "from-blue-600 to-purple-600"
   }
 ];
@@ -246,7 +259,9 @@ export const getIcon = (name: string, className?: string) => {
     Layers: <Layers className={className} />,
     Share2: <Share2 className={className} />,
     Clock: <Clock className={className} />,
-    Sparkles: <Sparkles className={className} />
+    Sparkles: <Sparkles className={className} />,
+    Monitor: <Monitor className={className} />,
+    Layout: <Layout className={className} />
   };
   return icons[name] || <Zap className={className} />;
 };
